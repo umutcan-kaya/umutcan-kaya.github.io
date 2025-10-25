@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umutcan Kaya</title>
+  <meta name="description" content="Personal website of Umutcan Kaya: research, projects, publications, and contact information." />
+  <meta name="author" content="Umutcan Kaya" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Umutcan Kaya — Home" />
+  <meta property="og:description" content="Research, projects, publications, and contact information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://umutcan-kaya.github.io/" />
+  <meta property="og:image" content="/images/og-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg: #0b0c10; /* dark */
+      --fg: #e6edf3; /* light text */
+      --muted: #9aa7b2;
+      --accent: #7c5cff; /* soft purple */
+      --card: #111318;
+      --border: #222631;
+      --code-bg: #0e1117;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #ffffff;
+        --fg: #0b1220;
+        --muted: #5b6572;
+        --accent: #5b34ff;
+        --card: #f8f9fb;
+        --border: #e5e7eb;
+        --code-bg: #f3f4f6;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
+    nav a{margin-right:18px;font-weight:600}
+    .hero{margin:32px 0 8px}
+    h1{font-size:40px;line-height:1.15;margin:0 0 6px}
+    h2{font-size:24px;margin:28px 0 12px}
+    .tagline{color:var(--muted);margin:0 0 16px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.02))}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 10px}
+    .list{list-style:none;padding:0;margin:0}
+    .list li{padding:10px 0;border-top:1px dashed var(--border)}
+    .list li:first-child{border-top:none}
+    code, pre{background:var(--code-bg);border:1px solid var(--border);border-radius:8px;padding:2px 6px}
+    pre{padding:12px;overflow:auto}
+    footer{margin:40px 0 16px;color:var(--muted)}
+    @media (min-width:800px){
+      .card.span6{grid-column:span 6}
+      .card.span4{grid-column:span 4}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;align-items:center;gap:16px">
+        <img class="avatar" src="images/avatar.jpg" alt="Portrait of Your Name" />
+        <div>
+          <h1>Your Name</h1>
+          <p class="tagline">Mathematical logic • Inner model theory • Forcing • Founder @ Bridge</p>
+          <div class="badges">
+            <a class="badge" href="mailto:umutcanmath@gmail.com">📧 Email</a>
+            <a class="badge" href="https://github.com/umutcan-kaya">🐙 GitHub</a>
+            <a class="badge" href="https://scholar.google.com/">🎓 Google Scholar</a>
+            <a class="badge" href="/cv.pdf">📄 CV</a>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section id="about" class="card span6">
+        <h3>About</h3>
+        <p>
+          I'm a researcher in set theory focused on inner model theory, universally Baire sets, and forcing
+          (\(\mathbb{P}_{\max}\), Sealing, projective absoluteness). I'm also building <strong>Bridge</strong>, a platform that connects seekers and experts via paid video sessions.
+        </p>
+        <p>
+          I'm currently a PhD student at University of Warsaw and at Institute of Mathematics Polish Academy of Sciences(IM PAN). My supervisor is Grigor Sargsyan.
+          Here you'll find my research notes, publications, projects, and contact info.
+        </p>
+      </section>
+
+      <section id="news" class="card span6">
+        <h3>News</h3>
+        <ul class="list">
+          <li><strong>Oct 2025:</strong> Draft on Vopěnka algebra for precipitous ideals (AD<sup>+</sup>) is out — preprint coming soon.</li>
+          <li><strong>Sep 2025:</strong> Talk at IMPAN LC seminar on Sealing and \(\Sigma^2_1\) absoluteness.</li>
+          <li><strong>Jun 2025:</strong> Bridge prototype scoped; seeking beta testers.</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="card span6">
+        <h3>Selected Projects</h3>
+        <ul class="list">
+          <li>
+            <strong>Sealing and \(\mathbb{P}_{\max}\):</strong> notes on HOD computation under AD<sup>+</sup> and consequences for \(\Sigma^2_1\) absoluteness. <a href="#">notes.pdf</a>
+          </li>
+          <li>
+            <strong>Bridge:</strong> one‑person founder journey building a video‑consultation marketplace. <a href="#">read more</a>
+          </li>
+          <li>
+            <strong>Vopěnka Algebra, Levy‑type symmetry:</strong> toward precipitous ideals on \(\theta\). <a href="#">preprint</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications" class="card span6">
+        <h3>Publications & Preprints</h3>
+        <ul class="list">
+          <li>Author, <em>Title of paper</em>, Journal/ArXiv, 2025. <a href="#">pdf</a> · <a href="#">bib</a></li>
+          <li>Author, <em>Another paper</em>, 2024. <a href="#">pdf</a></li>
+        </ul>
+      </section>
+
+      <section id="talks" class="card span6">
+        <h3>Talks</h3>
+        <ul class="list">
+          <li>“Generic Absoluteness and Gödel’s Program,” IMPAN, 2025. <a href="#">slides</a></li>
+          <li>“Sealing and Universally Baire Sets,” 2024. <a href="#">abstract</a></li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card span6">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:umutcanmath@gmail.com@example.com">you@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/umutcan-kaya">@your-username</a></p>
+      </section>
+
+      <section class="card span12">
+        <h3>Site Source</h3>
+        <p>This site is a single <code>index.html</code> file. Drop it into a repository named <code>your-username.github.io</code> and enable GitHub Pages.</p>
+        <details>
+          <summary>Optional: local development tips</summary>
+          <pre><code># 1) Preview locally (any static server)
+python3 -m http.server 5173
+# then visit http://localhost:5173
+
+# 2) Minify (optional): use any online HTML/CSS minifier
+</code></pre>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Umutcan Kaya. Built with ❤️ and GitHub Pages.
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (JSON‑LD) for richer search result snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Umutcan Kaya",
+    "url": "https://umutcan-kaya.github.io/",
+    "sameAs": [
+      "https://github.com/umutcan-kaya",
+      "https://scholar.google.com/",
+    ],
+    "jobTitle": "PhD Student, Mathematical Logic",
+    "affiliation": {
+      "@type": "Institution",
+      "name": "University of Warsaw/IM PAN"
+    }
+  }
+  </script>
+</body>
+</html>
