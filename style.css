@@ -1,0 +1,99 @@
+/* ======= Design tokens (dark / light) ======= */
+:root{
+  --bg: #0b0c10;      /* background */
+  --fg: #e6edf3;      /* text */
+  --muted: #9aa7b2;   /* secondary text */
+  --accent: #7c5cff;  /* link/button */
+  --card: #111318;    /* card panels */
+  --border: #222631;  /* borders */
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #ffffff;
+    --fg: #0b1220;
+    --muted: #5b6572;
+    --accent: #5b34ff;
+    --card: #f8f9fb;
+    --border: #e5e7eb;
+  }
+}
+
+/* ======= Base ======= */
+*{ box-sizing: border-box; }
+html, body{
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
+}
+a{ color: var(--accent); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* ======= Layout helpers ======= */
+.wrap{ max-width: 980px; margin: 0 auto; padding: 28px; }
+.muted{ color: var(--muted); }
+
+/* ======= Navigation ======= */
+nav a{ margin-right: 16px; font-weight: 600; }
+
+/* ======= Hero ======= */
+.hero{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin: 24px 0;
+  align-items: center;
+}
+.avatar{
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; border: 1px solid var(--border);
+}
+.headline{ font-size: 40px; line-height: 1.15; margin: 0; }
+.tagline{ color: var(--muted); margin: 6px 0 14px; }
+.badges{ display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ======= Buttons ======= */
+.btn{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  font-weight: 600; text-decoration: none;
+}
+.btn:hover{ text-decoration: underline; }
+
+/* ======= Cards / Sections ======= */
+.card, .section{
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px;
+}
+.section h3{ margin: 0 0 10px; }
+
+/* ======= Facts list ======= */
+.facts{
+  display: grid; grid-template-columns: 1fr; gap: 8px;
+  margin: 0; padding: 0; list-style: none; color: var(--muted);
+}
+.facts li{ display: flex; gap: 10px; }
+
+/* ======= Grid for feature cards ======= */
+.grid{ display: grid; grid-template-columns: 1fr; gap: 18px; }
+.card.span6{ grid-column: span 1; }
+
+/* ======= Tables / Lists on publications ======= */
+ul.publist{ margin: 0; padding-left: 20px; }
+ul.publist > li{ margin: 10px 0; }
+
+/* ======= Footer ======= */
+footer{ margin: 32px 0 8px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* ======= Responsive ======= */
+@media (min-width: 800px){
+  .hero{ grid-template-columns: 140px 1fr; }
+  .grid{ grid-template-columns: repeat(12, 1fr); }
+  .card.span6{ grid-column: span 6; }
+}
