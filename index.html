@@ -4,17 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Umutcan Kaya — Home</title>
-  <meta name="description" content="Set theory • inner model theory • universally Baire sets • P_max • Sealing • projective absoluteness." />
+  <meta name="description" content="Set theory researcher — inner model theory, universally Baire sets, P_max, Sealing, projective absoluteness. Founder of Bridge." />
+  <link rel="icon" href="/favicon.ico" />
   <style>
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:#0b0c10;color:#e6edf3}
-    a{color:#7c5cff;text-decoration:none} a:hover{text-decoration:underline}
+    :root{--bg:#0b0c10;--fg:#e6edf3;--muted:#9aa7b2;--accent:#7c5cff;--card:#111318;--border:#222631}
+    @media (prefers-color-scheme: light){:root{--bg:#fff;--fg:#0b1220;--muted:#5b6572;--accent:#5b34ff;--card:#f8f9fb;--border:#e5e7eb}}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
     .wrap{max-width:980px;margin:0 auto;padding:28px}
     nav a{margin-right:16px;font-weight:600}
-    .hero{margin:28px 0}
-    .headline{font-size:40px;line-height:1.15;margin:0 0 6px}
-    .muted{color:#9aa7b2}
-    .btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border:1px solid #222631;border-radius:999px}
-    .card{margin-top:18px;border:1px solid #222631;background:#111318;border-radius:16px;padding:18px}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:22px;margin:24px 0;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
+    .headline{font-size:40px;line-height:1.15;margin:0}
+    .tagline{color:var(--muted);margin:6px 0 14px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.02));font-weight:600}
+
+    .section{margin-top:26px;border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .section h3{margin:0 0 10px}
+    .facts{display:grid;grid-template-columns:1fr;gap:8px;margin:0;padding:0;list-style:none;color:var(--muted)}
+    .facts li{display:flex;gap:10px}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .card h4{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    footer{margin:32px 0 8px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    @media (min-width:800px){
+      .hero{grid-template-columns:140px 1fr}
+      .grid{grid-template-columns:repeat(12,1fr)}
+      .card.span6{grid-column:span 6}
+    }
   </style>
 </head>
 <body>
@@ -27,25 +50,77 @@
       <a href="/seminars.html">Seminars</a>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-      <h1 class="headline">Umutcan Kaya</h1>
-      <p class="muted">Set theory • Inner model theory • Universally Baire sets • <em>P</em><sub>max</sub> • Sealing • Projective absoluteness</p>
-      <p>
-        <a class="btn" href="/about.html">About me</a>
-        <a class="btn" href="/publications.html">Publications</a>
-        <a class="btn" href="/talks.html">Talks</a>
-        <a class="btn" href="/seminars.html">Seminars</a>
-        <a class="btn" href="mailto:umutcanmath@gmail.com">Contact</a>
-      </p>
+      <img class="avatar" src="/images/avatar.jpg" alt="Portrait of Umutcan Kaya" />
+      <div>
+        <h1 class="headline">Umutcan Kaya</h1>
+        <p class="tagline">Set theory • Inner model theory • Universally Baire sets • <em>P</em><sub>max</sub> • Sealing • Projective absoluteness</p>
+        <div class="badges">
+          <a class="btn" href="mailto:umutcanmath@gmail.com">📧 Email</a>
+          <a class="btn" href="/cv.pdf">📄 CV</a>
+          <a class="btn" href="https://github.com/umutcan-kaya">🐙 GitHub</a>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h3>Latest</h3>
-      <ul>
-        <li>Preprint: Vopěnka algebra & precipitous ideals on θ (AD<sup>+</sup>), 2025.</li>
-        <li>Talk: Generic Absoluteness and Gödel’s Program, IMPAN, 2025.</li>
+    <!-- QUICK FACTS -->
+    <section class="section">
+      <h3>Quick facts</h3>
+      <ul class="facts">
+        <li>🏛️ <span>Affiliations: University of Warsaw & IMPAN</span></li>
+        <li>🧭 <span>Supervisor: Grigor Sargsyan</span></li>
+        <li>🔎 <span>Current focus: HOD under AD<sup>+</sup>, Vopěnka algebra (Levy-type symmetry), precipitous ideals on θ</span></li>
+        <li>🧩 <span>Also building <strong>Bridge</strong>, a video consultation platform connecting seekers & experts</span></li>
       </ul>
     </section>
+
+    <!-- FEATURED -->
+    <section class="grid" style="margin-top:18px">
+      <article class="card span6">
+        <h4>Sealing & <em>P</em><sub>max</sub></h4>
+        <p class="muted">Notes on HOD computation under AD<sup>+</sup> and consequences for Σ<sup>2</sup><sub>1</sub> absoluteness.</p>
+        <p><a href="/publications.html">Read more →</a></p>
+      </article>
+      <article class="card span6">
+        <h4>Bridge</h4>
+        <p class="muted">Founder journey toward a vetted 1-to-1 expert marketplace with paid video sessions.</p>
+        <p><a href="/about.html">Why I’m building it →</a></p>
+      </article>
+    </section>
+
+    <!-- LATEST / NOW -->
+    <section class="section">
+      <h3>Now</h3>
+      <p class="muted">Drafting a preprint on Vopěnka algebra & precipitous ideals on θ (AD<sup>+</sup>), and preparing slides for “Generic Absoluteness and Gödel’s Program” at IMPAN.</p>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> Umutcan Kaya</span>
+      <span>Last updated <span id="d"></span></span>
+    </footer>
   </div>
+
+  <!-- Structured data for richer snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Umutcan Kaya",
+    "url": "https://umutcan-kaya.github.io/",
+    "email": "mailto:umutcanmath@gmail.com",
+    "sameAs": ["https://github.com/umutcan-kaya"],
+    "jobTitle": "Researcher in Set Theory",
+    "affiliation": [
+      {"@type":"Organization","name":"University of Warsaw"},
+      {"@type":"Organization","name":"IMPAN"}
+    ]
+  }
+  </script>
+  <script>
+    const now = new Date();
+    document.getElementById('y').textContent = now.getFullYear();
+    document.getElementById('d').textContent = now.toLocaleDateString(undefined,{year:'numeric',month:'short'});
+  </script>
 </body>
 </html>
