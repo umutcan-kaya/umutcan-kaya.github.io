@@ -46,9 +46,20 @@ nav a{ margin-right: 16px; font-weight: 600; }
   align-items: center;
 }
 .avatar{
-  width: 120px; height: 120px; border-radius: 50%;
-  object-fit: cover; border: 1px solid var(--border);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
 }
+
+@media (min-width: 800px){
+  .avatar{
+    width: 180px;
+    height: 180px;
+  }
+}
+
 .headline{ font-size: 40px; line-height: 1.15; margin: 0; }
 .tagline{ color: var(--muted); margin: 6px 0 14px; }
 .badges{ display: flex; gap: 10px; flex-wrap: wrap; }
