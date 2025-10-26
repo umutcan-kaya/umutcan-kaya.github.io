@@ -61,7 +61,7 @@ nav a{ margin-right: 16px; font-weight: 600; }
 }
 
 .headline{ font-size: 40px; line-height: 1.15; margin: 0; }
-.tagline{ color: var(--muted); margin: 10px 0 14px; }
+.tagline{ color: var(--muted); margin: 6px 0 14px; }
 .badges{ display: flex; gap: 10px; flex-wrap: wrap; }
 
 /* ======= Buttons ======= */
