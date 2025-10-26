@@ -1,7 +1,4 @@
-/* ======= Cream + Brown palette ======= */
-/* ======= Theme variables ======= */
-
-/* ======= Theme variables + manual toggle support ======= */
+/* ======= Theme variables (cream light + cocoa dark) ======= */
 
 /* Default (light) */
 :root{
@@ -14,7 +11,7 @@
   --topbar: #F4E6D4;  /* nav background */
 }
 
-/* Manual overrides via [data-theme] on <html> */
+/* Manual overrides via data-theme on <html> */
 :root[data-theme="light"]{
   --bg:#FFF8EE; --fg:#1C140D; --muted:#6B5442; --accent:#8B5E34; --card:#FFFBF3; --border:#E7D9C7; --topbar:#F4E6D4;
 }
@@ -22,16 +19,15 @@
   --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
 }
 
-/* If no manual choice yet, honor system preference */
+/* If no manual choice saved yet, honor system preference */
 @media (prefers-color-scheme: dark){
   :root:not([data-theme]){
     --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
   }
 }
 
-/* Small button helper */
+/* Small button helper (for your toggle) */
 .btn--small { padding: 6px 10px; font-size: 0.9rem; }
-
 
 
 /* ======= Base ======= */
