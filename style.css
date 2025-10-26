@@ -105,7 +105,7 @@ footer{ margin: 32px 0 8px; color: var(--muted); display: flex; justify-content:
 /* ======= Responsive ======= */
 /* Nudge the hero tagline to the right */
 .hero .tagline {
-  margin-left: 12px;   /* try 8–24px to taste */
+  margin-left: 16px;   /* try 8–24px to taste */
 }
 @media (min-width: 800px){
   .hero{ grid-template-columns: 140px 1fr; }/* Nudge the hero tagline to the right */
