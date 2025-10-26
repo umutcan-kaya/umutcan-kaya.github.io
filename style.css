@@ -1,42 +1,37 @@
 /* ======= Cream + Brown palette ======= */
 /* ======= Theme variables ======= */
 
-/* Default (will be set by JS on load, but keep a sensible fallback) */
+/* ======= Theme variables + manual toggle support ======= */
+
+/* Default (light) */
 :root{
-  --bg:     #FAF3E7; /* cream background */
-  --fg:     #3E2F1D; /* dark cocoa text */
-  --muted:  #6B5A47; /* softer brown */
-  --accent: #8B5E34; /* rich brown accent */
-  --card:   #FFF9F0; /* lighter cream panels */
-  --border: #E8DCC8; /* delicate border */
+  --bg:     #FFF8EE;  /* cream background */
+  --fg:     #1C140D;  /* near-black text */
+  --muted:  #6B5442;  /* soft brown secondary */
+  --accent: #8B5E34;  /* cocoa buttons/links */
+  --card:   #FFFBF3;  /* lighter cream panels */
+  --border: #E7D9C7;  /* beige border */
+  --topbar: #F4E6D4;  /* nav background */
 }
 
-/* Manual light mode */
+/* Manual overrides via [data-theme] on <html> */
 :root[data-theme="light"]{
-  --bg:     #FAF3E7;
-  --fg:     #3E2F1D;
-  --muted:  #6B5A47;
-  --accent: #8B5E34;
-  --card:   #FFF9F0;
-  --border: #E8DCC8;
+  --bg:#FFF8EE; --fg:#1C140D; --muted:#6B5442; --accent:#8B5E34; --card:#FFFBF3; --border:#E7D9C7; --topbar:#F4E6D4;
 }
-
-/* Manual dark mode */
 :root[data-theme="dark"]{
-  --bg:     #1F160F;  /* deep brown */
-  --fg:     #F3E9DC;  /* cream text */
-  --muted:  #D2C5B6;  /* soft cream */
-  --accent: #D0A36B;  /* warm caramel */
-  --card:   #2A1D12;  /* panel */
-  --border: #3A2A1C;  /* border */
+  --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
 }
 
-/* Optional: if no manual choice saved yet, honor system preference */
+/* If no manual choice yet, honor system preference */
 @media (prefers-color-scheme: dark){
   :root:not([data-theme]){
-    --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C;
+    --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
   }
 }
+
+/* Small button helper */
+.btn--small { padding: 6px 10px; font-size: 0.9rem; }
+
 
 
 /* ======= Base ======= */
