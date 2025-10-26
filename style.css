@@ -1,22 +1,43 @@
-/* ======= Design tokens (dark / light) ======= */
+/* ======= Cream + Brown palette ======= */
+/* ======= Theme variables ======= */
+
+/* Default (will be set by JS on load, but keep a sensible fallback) */
 :root{
-  --bg: #0b0c10;      /* background */
-  --fg: #e6edf3;      /* text */
-  --muted: #9aa7b2;   /* secondary text */
-  --accent: #7c5cff;  /* link/button */
-  --card: #111318;    /* card panels */
-  --border: #222631;  /* borders */
+  --bg:     #FAF3E7; /* cream background */
+  --fg:     #3E2F1D; /* dark cocoa text */
+  --muted:  #6B5A47; /* softer brown */
+  --accent: #8B5E34; /* rich brown accent */
+  --card:   #FFF9F0; /* lighter cream panels */
+  --border: #E8DCC8; /* delicate border */
 }
-@media (prefers-color-scheme: light){
-  :root{
-    --bg: #ffffff;
-    --fg: #0b1220;
-    --muted: #5b6572;
-    --accent: #5b34ff;
-    --card: #f8f9fb;
-    --border: #e5e7eb;
+
+/* Manual light mode */
+:root[data-theme="light"]{
+  --bg:     #FAF3E7;
+  --fg:     #3E2F1D;
+  --muted:  #6B5A47;
+  --accent: #8B5E34;
+  --card:   #FFF9F0;
+  --border: #E8DCC8;
+}
+
+/* Manual dark mode */
+:root[data-theme="dark"]{
+  --bg:     #1F160F;  /* deep brown */
+  --fg:     #F3E9DC;  /* cream text */
+  --muted:  #D2C5B6;  /* soft cream */
+  --accent: #D0A36B;  /* warm caramel */
+  --card:   #2A1D12;  /* panel */
+  --border: #3A2A1C;  /* border */
+}
+
+/* Optional: if no manual choice saved yet, honor system preference */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]){
+    --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C;
   }
 }
+
 
 /* ======= Base ======= */
 *{ box-sizing: border-box; }
