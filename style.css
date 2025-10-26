@@ -103,8 +103,12 @@ ul.publist > li{ margin: 10px 0; }
 footer{ margin: 32px 0 8px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
 /* ======= Responsive ======= */
+/* Nudge the hero tagline to the right */
+.hero .tagline {
+  margin-left: 12px;   /* try 8–24px to taste */
+}
 @media (min-width: 800px){
-  .hero{ grid-template-columns: 140px 1fr; }
+  .hero{ grid-template-columns: 140px 1fr; }/* Nudge the hero tagline to the right */
   .grid{ grid-template-columns: repeat(12, 1fr); }
   .card.span6{ grid-column: span 6; }
 }
