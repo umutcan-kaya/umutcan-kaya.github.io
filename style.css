@@ -37,14 +37,6 @@
   }
 }
 
-
-/* If no manual choice saved yet, honor system preference */
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme]){
-    --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
-  }
-}
-
 /* Small button helper (for your toggle) */
 .btn--small { padding: 6px 10px; font-size: 0.9rem; }
 
