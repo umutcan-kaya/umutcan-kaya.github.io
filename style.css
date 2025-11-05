@@ -80,17 +80,22 @@ nav a{ margin-right: 16px; font-weight: 600; }
 }
 
 /* Larger on desktop */
-@media (min-width: 800px){
-  .hero{
-    grid-template-columns: max-content 1fr; /* auto-fit the photo */
-    gap: 28px;
-    align-items: center;
-  }
-  /* keep your avatar size here */
-  .avatar{
-    width: 240px;
-    height: 240px;
-  }
+.hero{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin: 24px 0;
+  align-items: center;
+}
+
+/* Avatar: bigger + square (no circle) */
+.avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;   /* 0 for sharp corners */
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .headline{ font-size: 40px; line-height: 1.15; margin: 0; }
@@ -128,20 +133,23 @@ nav a{ margin-right: 16px; font-weight: 600; }
 .grid{ display: grid; grid-template-columns: 1fr; gap: 18px; }
 .card.span6{ grid-column: span 1; }
 
-/* ======= Tables / Lists on publications ======= */
-ul.publist{ margin: 0; padding-left: 20px; }
-ul.publist > li{ margin: 10px 0; }
-
 /* ======= Footer ======= */
 footer{ margin: 32px 0 8px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-/* ======= Responsive ======= */
 /* Nudge the hero tagline to the right */
-.hero .tagline {
-  margin-left: 16px;   /* try 8–24px to taste */
-}
+.hero .tagline { margin-left: 16px; }
+
+/* ======= Responsive ======= */
 @media (min-width: 800px){
-  .hero{ grid-template-columns: 140px 1fr; }/* Nudge the hero tagline to the right */
+  .hero{
+    grid-template-columns: max-content 1fr; /* auto-fit the photo width */
+    gap: 28px;
+    align-items: center;
+  }
+  .avatar{
+    width: 240px;
+    height: 240px;
+  }
   .grid{ grid-template-columns: repeat(12, 1fr); }
   .card.span6{ grid-column: span 6; }
 }
