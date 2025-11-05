@@ -60,7 +60,42 @@ a:hover{ text-decoration: underline; }
 /* ======= Navigation ======= */
 nav a{ margin-right: 16px; font-weight: 600; }
 
-/* ======= Hero ======= */
+/* Quotation block */
+
+.quote{
+  position: relative;
+  margin: 0;
+  padding: 18px 20px 18px 24px;
+  border-left: 4px solid var(--accent);
+  background: var(--card);
+  color: var(--fg);
+}
+.quote p{
+  margin: 0;
+  font-style: italic;
+}
+.quote{ border-left: none; text-align: center; padding: 24px }
+.quote::before{ display:none }
+.quote p{ font-size: 1.05rem }
+.quote footer{
+  margin-top: 10px;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+/* Optional big decorative quote mark */
+.quote::before{
+  content: "“";
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.4;
+}
+
 .hero{
   display: grid;
   grid-template-columns: 1fr;
