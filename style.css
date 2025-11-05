@@ -1,6 +1,14 @@
-/* ======= Theme variables (cream light + cocoa dark) ======= */
+:root[data-theme="dark"]{
+  /* Blue-green (teal) dark palette */
+  --bg:     #0B1220;  /* deep navy */
+  --fg:     #E6F1F7;  /* soft ice text */
+  --muted:  #9FB7C8;  /* cool-muted text */
+  --accent: #22D3EE;  /* bright cyan/teal accent (try #2DD4BF for greener) */
+  --card:   #111827;  /* slate panel */
+  --border: #233041;  /* cool border */
+  --topbar: #0F172A;  /* top bar/nav */
+}
 
-/* Default (light) */
 :root{
   --bg:     #FFF8EE;  /* cream background */
   --fg:     #1C140D;  /* near-black text */
