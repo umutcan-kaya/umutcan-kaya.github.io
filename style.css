@@ -68,20 +68,27 @@ nav a{ margin-right: 16px; font-weight: 600; }
   margin: 24px 0;
   align-items: center;
 }
+/* Avatar: bigger + square (no circle) */
 .avatar{
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 200px;      /* was 140/160—adjust to taste */
+  height: 200px;
+  border-radius: 12px;   /* ← square with soft corners; use 0 for sharp corners */
+  object-fit: cover;     /* keep face centered without distortion */
   border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
 }
 
+/* Larger on desktop */
 @media (min-width: 800px){
   .avatar{
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
   }
 }
+
+/* Give the hero a bit more room if needed */
+.hero{ gap: 26px; }
 
 .headline{ font-size: 40px; line-height: 1.15; margin: 0; }
 .tagline{ color: var(--muted); margin: 6px 0 14px; }
