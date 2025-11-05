@@ -1,15 +1,8 @@
-:root[data-theme="dark"]{
-  /* Blue-green (teal) dark palette */
-  --bg:     #0B1220;  /* deep navy */
-  --fg:     #E6F1F7;  /* soft ice text */
-  --muted:  #9FB7C8;  /* cool-muted text */
-  --accent: #22D3EE;  /* bright cyan/teal accent (try #2DD4BF for greener) */
-  --card:   #111827;  /* slate panel */
-  --border: #233041;  /* cool border */
-  --topbar: #0F172A;  /* top bar/nav */
-}
+/* ======= Theme variables (base + manual toggle) ======= */
 
+/* Base (used until a manual data-theme is applied) */
 :root{
+  /* light cream defaults */
   --bg:     #FFF8EE;  /* cream background */
   --fg:     #1C140D;  /* near-black text */
   --muted:  #6B5442;  /* soft brown secondary */
@@ -19,13 +12,31 @@
   --topbar: #F4E6D4;  /* nav background */
 }
 
-/* Manual overrides via data-theme on <html> */
+/* Manual light override */
 :root[data-theme="light"]{
-  --bg:#FFF8EE; --fg:#1C140D; --muted:#6B5442; --accent:#8B5E34; --card:#FFFBF3; --border:#E7D9C7; --topbar:#F4E6D4;
+  --bg:#FFF8EE; --fg:#1C140D; --muted:#6B5442; --accent:#8B5E34;
+  --card:#FFFBF3; --border:#E7D9C7; --topbar:#F4E6D4;
 }
+
+/* Manual dark override — BLUE-GREEN (TEAL) */
 :root[data-theme="dark"]{
-  --bg:#1F160F; --fg:#F3E9DC; --muted:#D2C5B6; --accent:#D0A36B; --card:#2A1D12; --border:#3A2A1C; --topbar:#251A12;
+  --bg:     #0B1220;  /* deep navy */
+  --fg:     #E6F1F7;  /* soft ice text */
+  --muted:  #9FB7C8;  /* cool-muted text */
+  --accent: #2DD4BF;  /* teal accent (use #22D3EE if you prefer more cyan) */
+  --card:   #111827;  /* slate panel */
+  --border: #233041;  /* cool border */
+  --topbar: #0F172A;  /* top bar */
 }
+
+/* Only when there's NO manual choice, follow system preference */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]){
+    --bg:#0B1220; --fg:#E6F1F7; --muted:#9FB7C8; --accent:#2DD4BF;
+    --card:#111827; --border:#233041; --topbar:#0F172A;
+  }
+}
+
 
 /* If no manual choice saved yet, honor system preference */
 @media (prefers-color-scheme: dark){
